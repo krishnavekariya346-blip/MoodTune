@@ -217,72 +217,103 @@ http://<YOUR_IP>:5000/analyze
 
 ## 📸 Screenshots  
 
-### 🔐 SignIn Screen  
-![signIn](screenshots/home11.jpg)
-![signIn](screenshots/home12.jpg)
+### 🔐 Sign In Screen  
+<p align="left">
+  <img src="screenshots/home11.jpg" width="220"/>
+  <img src="screenshots/home12.jpg" width="220"/>
+</p>
 
 ---
 
 ### 🏠 Home Dashboard  
-![Home](screenshots/home1.jpg)
+<p align="left">
+  <img src="screenshots/home1.jpg" width="220"/>
+</p>
 
 ---
 
 ### 😊 Face Detection  
-![Face Detection](screenshots/FaceDetection1.jpg)
-![Face Detection](screenshots/FaceDetection2.jpg)
-![Face Detection](screenshots/FaceDetection3.jpg)
+<p align="left">
+  <img src="screenshots/FaceDetection1.jpg" width="220"/>
+  <img src="screenshots/FaceDetection2.jpg" width="220"/>
+  <img src="screenshots/FaceDetection3.jpg" width="220"/>
+</p>
 
 ---
 
 ### 💬 Chatbot  
-![Chatbot](screenshots/chatbot1.jpg)
-![Chatbot](screenshots/chatbot2.jpg)
+<p align="left">
+  <img src="screenshots/chatbot1.jpg" width="220"/>
+  <img src="screenshots/chatbot2.jpg" width="220"/>
+</p>
 
 ---
 
 ### 🎶 Music Player  
-![Music](screenshots/song_happy.jpg)
-![Music](screenshots/song_neutral.jpg)
-![Music](screenshots/song_sad.jpg)
+<p align="left">
+  <img src="screenshots/song_happy.jpg" width="220"/>
+  <img src="screenshots/song_neutral.jpg" width="220"/>
+  <img src="screenshots/song_sad.jpg" width="220"/>
+</p>
 
 ---
 
-### 📊 Dark Theme 
-![Theme](screenshots/dark1.jpg)
-![Theme](screenshots/dark2.jpg)
-![Theme](screenshots/dark3.jpg)
-![Theme](screenshots/dark4.jpg)
---- 
+### 🌙 Dark Theme  
+<p align="left">
+  <img src="screenshots/dark1.jpg" width="220"/>
+  <img src="screenshots/dark2.jpg" width="220"/>
+  <img src="screenshots/dark3.jpg" width="220"/>
+</p>
 
-### Side Views
-![Sidebar](screenshots/sidebar.jpg)
-
-### Daily Report / Calendar 
-![Calendar](screenshots/calendar1.jpg)
-![Calendar](screenshots/calendar2.jpg)
-![Calendar](screenshots/calendar3.jpg)
+<p align="left">
+  <img src="screenshots/dark4.jpg" width="220"/>
+</p>
 
 ---
 
-### Monthly Report
-![Monthly](screenshots/chart_bar.jpg)
+### 📂 Side View  
+<p align="left">
+  <img src="screenshots/sidebar.jpg" width="220"/>
+</p>
 
 ---
 
-### Weekly Report
-![Weekly](screenshots/chart_pie.jpg)
+### 📅 Daily Report / Calendar  
+<p align="left">
+  <img src="screenshots/calendar1.jpg" width="220"/>
+  <img src="screenshots/calendar2.jpg" width="220"/>
+  <img src="screenshots/calendar3.jpg" width="220"/>
+</p>
 
 ---
 
-### Setting View
-![settings](screenshots/settings.jpg)
-![settings](screenshots/edit.jpg)
-![settings](screenshots/changepwd.jpg)
-![settings](screenshots/themes.jpg)
-![settings](screenshots/about.jpg)
+### 📊 Monthly Report  
+<p align="left">
+  <img src="screenshots/chart_bar.jpg" width="220"/>
+</p>
 
+---
 
+### 🥧 Weekly Report  
+<p align="left">
+  <img src="screenshots/chart_pie.jpg" width="220"/>
+</p>
+
+---
+
+### ⚙️ Settings  
+<p align="left">
+  <img src="screenshots/settings.jpg" width="220"/>
+  <img src="screenshots/edit.jpg" width="220"/>
+  <img src="screenshots/changepwd.jpg" width="220"/>
+</p>
+
+<p align="left">
+  <img src="screenshots/themes.jpg" width="220"/>
+  <img src="screenshots/about.jpg" width="220"/>
+</p>
+
+---
 
 ### 💡 Use Cases
 
