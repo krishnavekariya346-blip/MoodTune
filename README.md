@@ -265,7 +265,7 @@ http://<YOUR_IP>:5000/analyze
   <img src="screenshots/dark3.jpg" width="220"/>
 </p>
 
-<p align="left">
+<p align="center">
   <img src="screenshots/dark4.jpg" width="220"/>
 </p>
 
@@ -308,7 +308,7 @@ http://<YOUR_IP>:5000/analyze
   <img src="screenshots/changepwd.jpg" width="220"/>
 </p>
 
-<p align="left">
+<p align="center">
   <img src="screenshots/themes.jpg" width="220"/>
   <img src="screenshots/about.jpg" width="220"/>
 </p>
