@@ -324,7 +324,15 @@ http://<YOUR_IP>:5000/analyze
 
 ---
 
-### 👨‍💻 Author
+## Contact
 
-Krishna
+Krishna Vekariya
+
+GitHub: https://github.com/krishnavekariya346-blip/MoodTune
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
 
