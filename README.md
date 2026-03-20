@@ -1,38 +1,85 @@
-# MoodTune - Unified Android Application
+# 🎵 MoodTune  
 
-A unified Android application that combines 4 separate modules into one cohesive mood-based music recommendation system.
+![Platform](https://img.shields.io/badge/Platform-Android-green)
+![Language](https://img.shields.io/badge/Language-Java-blue)
+![Backend](https://img.shields.io/badge/Backend-Flask-orange)
+![ML](https://img.shields.io/badge/ML-TensorFlow-red)
+![Database](https://img.shields.io/badge/Database-Firebase-yellow)
+![License](https://img.shields.io/badge/License-MIT-purple)
 
-## Features
+### AI-Powered Emotion-Based Music Recommender
 
-### 🔐 Authentication
-- Google Sign-In integration using Firebase Auth
-- Login persistence for returning users
-- Automatic user profile creation
+> *“Your mood. Your music. Instantly.”*
 
-### 😊 Mood Detection
-- **Face Detection**: Capture photo and detect mood using facial expressions
-- **Chatbot**: Text-based mood detection through conversation
-- **Quick Mood Buttons**: 5 quick mood selection buttons (Happy, Sad, Angry, Neutral, Surprise)
+---
 
-### 🎵 Music Recommendation
-- Mood-based song recommendations using Audius API
-- Personalized playlists per mood
-- YouTube-style audio player with ExoPlayer
+## 📌 Overview  
 
-### 📊 Mood Reports
-- **Daily Report**: Calendar view with mood indicators
-- **Weekly Report**: Pie chart showing weekly mood distribution
-- **Monthly Report**: Bar chart showing monthly mood trends
+MoodTune is a unified Android application that intelligently recommends music based on a user's emotional state.  
 
-### ⚙️ Settings
-- Edit Profile
-- Change Password
-- Theme Settings
-- Notification Settings
-- About App
-- Sign Out
+It combines **Facial Emotion Detection**, **Chat-based Sentiment Analysis**, and **Context-Aware Music Recommendation** to deliver a personalized and emotionally adaptive experience.
 
-## Project Structure
+The app also tracks emotional patterns over time, helping users gain **self-awareness and mental wellness insights**.
+
+---
+
+## 🚀 Key Features  
+
+### 🔐 Authentication  
+- Google Sign-In using Firebase Authentication  
+- Persistent login sessions  
+- Automatic user profile creation  
+
+---
+
+### 😊 Mood Detection  
+- 📷 Face Detection using ML model  
+- 💬 Chatbot Emotion Detection (text-based)  
+- ⚡ Quick Mood Selection Buttons  
+  - Happy | Sad | Angry | Neutral | Surprise  
+
+---
+
+### 🎶 Music Recommendation  
+- Emotion → Genre mapping  
+- Songs fetched using Audius API / YouTube API  
+- Built-in audio player using ExoPlayer  
+- Personalized playlists for each mood  
+
+---
+
+### 📊 Mood Analytics & Reports  
+- 📅 Daily Mood Calendar View  
+- 🥧 Weekly Mood Distribution (Pie Chart)  
+- 📈 Monthly Mood Trends (Bar Graph)  
+- Emotion tracking with timestamps  
+
+---
+
+### ⚙️ Settings & Personalization  
+- Edit Profile  
+- Change Password  
+- Theme Settings  
+- Notifications  
+- About Section  
+- Secure Logout  
+
+---
+
+## 🧠 How It Works  
+
+1. User logs in via Google Authentication  
+2. Emotion is detected using:
+   - Facial Expression (ML Model)
+   - Chat Input (NLP-based detection)
+3. Emotion is mapped to a music genre  
+4. Songs are fetched dynamically via APIs  
+5. User mood is stored and tracked in Firebase  
+6. Reports are generated for insights  
+
+---
+
+## 🏗️ Project Structure  
 
 ```
 MT/
@@ -54,87 +101,199 @@ MT/
 ├── gradle/
 │   └── libs.versions.toml
 └── settings.gradle.kts
+
+```
+---
+
+## 🛠️ Tech Stack  
+
+### 📱 Frontend  
+- Android Studio (Java)  
+
+### ⚙️ Backend  
+- Flask / Django  
+
+### 🤖 Machine Learning  
+- TensorFlow / Keras  
+- OpenCV  
+- CNN (FER2013 Dataset)  
+
+### ☁️ Database  
+- Firebase Firestore  
+
+### 🔌 APIs  
+- Audius API   
+- Weather API  
+- Location Services  
+
+---
+
+## ⚙️ Setup Instructions  
+
+### 1️⃣ Firebase Setup  
+- Add `google-services.json` to `app/`  
+- Update `default_web_client_id` in `strings.xml`  
+
+---
+
+### 2️⃣ Backend Configuration  
+
+Update API URLs:
+
+**Face Detection:**
+```
+http://<YOUR_IP>:5000/analyze
 ```
 
-## Setup Instructions
+---
 
-1. **Firebase Configuration**
-   - Add your `google-services.json` file to `app/` directory
-   - Update `default_web_client_id` in `strings.xml` with your Firebase OAuth client ID
+### 3️⃣ Build & Run  
+```
+./gradlew build
+```
 
-2. **Backend Servers**
-   - Face Detection: Update `BACKEND_URL` in `FaceDetectionActivity.java` (default: `http://172.20.10.4:5000/analyze`)
-   - Chatbot: Update `BASE_URL` in `ChatbotActivity.java` (default: `http://192.168.1.4:5000`)
 
-3. **Build the Project**
-   ```bash
-   ./gradlew build
-   ```
+---
 
-## Database Schema
+## 🗄️ Database Schema  
 
-### Firestore Collections
-
-#### `/users/{userId}`
-```json
+### 🔹 Users Collection  
+```
 {
-  "uid": "user_firebase_uid",
-  "name": "User Display Name",
-  "email": "user@example.com",
+  "uid": "user_id",
+  "name": "User Name",
+  "email": "user@email.com",
   "currentMood": "happy",
-  "isFirstTime": false,
   "createdAt": 1234567890
 }
 ```
-
-#### `/moods/{userId}`
-```json
-{
-  "history": [
-    {
-      "mood": "happy",
-      "date": "2025-01-15T10:30:00Z",
-      "source": "face",
-      "confidence": 0.85
-    }
-  ]
-}
+### 🔹 Mood History
 ```
-
-#### `/playlists/{playlistId}`
-```json
 {
-  "playlistId": "mood_userId_timestamp",
-  "userId": "user_firebase_uid",
   "mood": "happy",
-  "songs": [...],
-  "createdAt": 1234567890,
-  "updatedAt": 1234567890
+  "date": "2025-01-15T10:30:00Z",
+  "source": "face/chatbot",
+  "confidence": 0.85
+}
+```
+### 🔹 Playlists
+```
+{
+  "playlistId": "mood_user_timestamp",
+  "mood": "happy",
+  "songs": [...]
 }
 ```
 
-## Navigation Flow
+---
 
-1. **First-time User**: Login → Home Page
-2. **Returning User**: Auto-login → Home Page
-3. **Mood Detection**: Face/Chatbot/Quick Mood → Save to DB → Song Recommendation
-4. **Reports**: Sidebar Menu → Daily/Weekly/Monthly Reports
-5. **Settings**: Sidebar Menu → Settings → Edit Profile/Change Password/etc.
+### 🔄 App Flow
 
-## Dependencies
+- New User → Login → Home
+- Returning User → Auto Login → Home
+- Detect Mood → Store → Recommend Music
+- View Reports → Analyze Mood Trends
+- Settings → Personalization
 
-- Firebase Auth & Firestore
-- Google Sign-In
-- ExoPlayer (Audio playback)
-- MPAndroidChart (Charts)
-- Material Calendar View
-- OkHttp (Network requests)
-- Gson (JSON parsing)
+---
 
-## Notes
+### ⚠️ Challenges Faced
 
-- All mood entries are saved with source tracking (face, chatbot, quick_mood)
-- User ID is automatically retrieved from Firebase Auth
-- Login state persists using SharedPreferences
-- All activities check for user authentication before proceeding
+- Lighting issues in facial detection
+- Similar expressions (Neutral vs Sad)
+- Real-time API response handling
+- Emotion accuracy from text input
+
+---
+
+### 🌱 Future Enhancements
+
+- 🎧 Spotify / Apple Music Integration
+- 🎤 Voice-based Emotion Detection
+- ⌚ Smartwatch Integration
+- 🧠 Advanced AI Emotion Models
+
+---
+
+## 📸 Screenshots  
+
+### 🔐 SignIn Screen  
+![signIn](screenshots/home11.jpg)
+![signIn](screenshots/home12.jpg)
+
+---
+
+### 🏠 Home Dashboard  
+![Home](screenshots/home1.jpg)
+
+---
+
+### 😊 Face Detection  
+![Face Detection](screenshots/FaceDetection1.jpg)
+![Face Detection](screenshots/FaceDetection2.jpg)
+![Face Detection](screenshots/FaceDetection3.jpg)
+
+---
+
+### 💬 Chatbot  
+![Chatbot](screenshots/chatbot1.jpg)
+![Chatbot](screenshots/chatbot2.jpg)
+
+---
+
+### 🎶 Music Player  
+![Music](screenshots/song_happy.jpg)
+![Music](screenshots/song_neutral.jpg)
+![Music](screenshots/song_sad.jpg)
+
+---
+
+### 📊 Dark Theme 
+![Theme](screenshots/dark1.jpg)
+![Theme](screenshots/dark2.jpg)
+![Theme](screenshots/dark3.jpg)
+![Theme](screenshots/dark4.jpg)
+--- 
+
+### Side Views
+![Sidebar](screenshots/sidebar.jpg)
+
+### Daily Report / Calendar 
+![Calendar](screenshots/calendar1.jpg)
+![Calendar](screenshots/calendar2.jpg)
+![Calendar](screenshots/calendar3.jpg)
+
+---
+
+### Monthly Report
+![Monthly](screenshots/chart_bar.jpg)
+
+---
+
+### Weekly Report
+![Weekly](screenshots/chart_pie.jpg)
+
+---
+
+### Setting View
+![settings](screenshots/settings.jpg)
+![settings](screenshots/edit.jpg)
+![settings](screenshots/changepwd.jpg)
+![settings](screenshots/themes.jpg)
+![settings](screenshots/about.jpg)
+
+
+
+### 💡 Use Cases
+
+- Mood-based music listening
+- Stress relief & mental wellness
+- Emotional tracking & analysis
+- Personalized entertainment
+
+---
+
+### 👨‍💻 Author
+
+Krishna
 
