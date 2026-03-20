@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <!-- Timestamp (centered, shown for first message or when time changes) -->
+    <TextView
+        android:id="@+id/tvTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8:45 AM"
+        android:textSize="11sp"
+        android:textColor="#999999"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bot Message Layout -->
+    <LinearLayout
+        android:id="@+id/layoutBot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTimestamp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0">
+
+        <!-- Bot Icon -->
+        <ImageView
+            android:id="@+id/ivBotIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_bot"
+            android:background="@drawable/bg_bot_icon"
+            android:padding="8dp"
+            android:layout_gravity="top"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Bot"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Bot Name -->
+            <TextView
+                android:id="@+id/tvBotName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MoodTune"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Bot Message Bubble -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#F0F0F0"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <TextView
+                    android:id="@+id/tvBotMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Message text"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_theme_onSurface"
+                    android:padding="12dp"
+                    android:maxWidth="280dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Message Time -->
+            <TextView
+                android:id="@+id/tvBotTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Just now"
+                android:textSize="10sp"
+                android:textColor="#999999"
+                android:layout_marginTop="4dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- User Message Layout -->
+    <LinearLayout
+        android:id="@+id/layoutUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:visibility="gone"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTimestamp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <!-- User Message Bubble -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/md_theme_primaryContainer"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <TextView
+                    android:id="@+id/tvUserMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Message text"
+                    android:textSize="14sp"
+                    android:textColor="@color/md_theme_onPrimaryContainer"
+                    android:padding="12dp"
+                    android:maxWidth="280dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Message Time -->
+            <TextView
+                android:id="@+id/tvUserTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Just now"
+                android:textSize="10sp"
+                android:textColor="#999999"
+                android:layout_marginTop="4dp"
+                android:gravity="end"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- User Icon -->
+        <ImageView
+            android:id="@+id/ivUserIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_user"
+            android:background="@drawable/bg_user_icon"
+            android:padding="6dp"
+            android:layout_gravity="top"
+            android:layout_marginStart="8dp"
+            android:contentDescription="User"
+            android:tint="#9C27B0" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

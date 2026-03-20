@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_background"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Select Your Mood"
+        style="@style/Widget.MoodTune.TextView.Title"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardHappy"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardHappy"
+        style="@style/Widget.MoodTune.Card"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardSad">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHappy"
+            style="@style/Widget.MoodTune.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="😊 Happy"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSad"
+        style="@style/Widget.MoodTune.Card"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cardHappy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardAngry">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSad"
+            style="@style/Widget.MoodTune.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="😔 Sad"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardAngry"
+        style="@style/Widget.MoodTune.Card"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cardSad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardSurprise">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAngry"
+            style="@style/Widget.MoodTune.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="😡 Angry"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSurprise"
+        style="@style/Widget.MoodTune.Card"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cardAngry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardNeutral">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSurprise"
+            style="@style/Widget.MoodTune.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="😲 Surprise"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardNeutral"
+        style="@style/Widget.MoodTune.Card"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cardSurprise"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.5">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNeutral"
+            style="@style/Widget.MoodTune.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="😐 Neutral"
+            android:textSize="18sp"
+            app:cornerRadius="20dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

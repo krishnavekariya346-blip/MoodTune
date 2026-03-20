@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_mood_chart"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/calendar" />
+    <item
+        android:id="@+id/menu_mood_history"
+        android:icon="@drawable/ic_daily_report"
+        android:title="@string/daily_report" />
+    <item
+        android:id="@+id/menu_weekly_summary"
+        android:icon="@drawable/ic_weekly_report"
+        android:title="@string/weekly_report" />
+    
+    <group android:id="@+id/menu_group_bottom">
+        <item
+            android:id="@+id/menu_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+    </group>
+</menu>
+

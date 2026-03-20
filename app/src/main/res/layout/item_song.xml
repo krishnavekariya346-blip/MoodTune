@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.MoodTune.Card.Outlined"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgIndicator"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:tint="@color/md_theme_primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Song Title"
+            style="@style/Widget.MoodTune.TextView.Body"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgIndicator"
+            app:layout_constraintEnd_toStartOf="@id/txtDuration" />
+
+        <TextView
+            android:id="@+id/txtArtist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Artist"
+            style="@style/Widget.MoodTune.TextView.Hint"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle"
+            app:layout_constraintStart_toStartOf="@id/txtTitle"
+            app:layout_constraintEnd_toEndOf="@id/txtTitle" />
+
+        <TextView
+            android:id="@+id/txtSource"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Source"
+            style="@style/Widget.MoodTune.TextView.Hint"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/txtArtist"
+            app:layout_constraintStart_toStartOf="@id/txtTitle"
+            app:layout_constraintEnd_toEndOf="@id/txtTitle"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/txtDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            style="@style/Widget.MoodTune.TextView.Hint"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
